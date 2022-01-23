@@ -78,6 +78,7 @@ B9: Thêm urlconf
         path('search/', include('haystack.urls')),
 
 B10: Thêm file base.html, path: myapp/templates/search/base.html
+        
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -88,9 +89,11 @@ B10: Thêm file base.html, path: myapp/templates/search/base.html
         {% block content %}
         {% endblock %}
         </body>
-        </html>```
+        </html>
+        
 B11: Thêm search template
-            ```{% extends 'base.html' %}
+
+            {% extends 'base.html' %}
 
             {% block content %}
                 <h2>Search</h2>
@@ -132,7 +135,7 @@ B11: Thêm search template
 
 B12: Thêm view
 
-        ```from django.shortcuts import render
+        from django.shortcuts import render
         from myapp.models import Note
         # Create your views here.
         def search_view(request):
@@ -148,6 +151,6 @@ B12: Thêm view
                 'title': note_body.title,
                 'note_body': note_body
             }
-            return render(request, 'search/read_body.html', context)```
+            return render(request, 'search/read_body.html', context)
 
 
