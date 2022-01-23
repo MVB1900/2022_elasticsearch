@@ -52,7 +52,7 @@ B6: Thêm haystack_connection ( Ở đây sử dụng elasticsearch 7)
         }
         
 B7: Thêm file search_indexes.py, path: myapp/search_indexes.py
-        ```import datetime
+        import datetime
         from haystack import indexes
         from myapp.models import Note
 
@@ -67,18 +67,18 @@ B7: Thêm file search_indexes.py, path: myapp/search_indexes.py
 
             def index_queryset(self, using=None):
                 """Used when the entire index for model is updated."""
-                return self.get_model().objects.filter(pub_date__lte=datetime.datetime.now())```
+                return self.get_model().objects.filter(pub_date__lte=datetime.datetime.now())
   
 B8: Thêm note_text.txt file path: templates/search/indexes/myapp/note_text.txt
-          ```{{ object.title }}
+          {{ object.title }}
           {{ object.user.get_full_name }}
-          {{ object.body }}```
+          {{ object.body }}
           
 B9: Thêm urlconf
-        ```path('search/', include('haystack.urls')),```
+        path('search/', include('haystack.urls')),
 
 B10: Thêm file base.html, path: myapp/templates/search/base.html
-        ```<!DOCTYPE html>
+        <!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -128,7 +128,7 @@ B11: Thêm search template
                         {# Show some example queries to run, maybe query syntax, something else? #}
                     {% endif %}
                 </form>
-            {% endblock %}```
+            {% endblock %}
 
 B12: Thêm view
 
