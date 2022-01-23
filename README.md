@@ -7,7 +7,8 @@ Step by steps:
 B1: Tạo project django 
 B2: Thêm app 'myapp'
     Thêm models
-        ```from django.db import models
+        from django.db import models
+        
         from django.contrib.auth.models import User
 
 
