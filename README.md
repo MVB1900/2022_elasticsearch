@@ -70,11 +70,13 @@ B7: Thêm file search_indexes.py, path: myapp/search_indexes.py
                 return self.get_model().objects.filter(pub_date__lte=datetime.datetime.now())
   
 B8: Thêm note_text.txt file path: templates/search/indexes/myapp/note_text.txt
+
           {{ object.title }}
           {{ object.user.get_full_name }}
           {{ object.body }}
           
 B9: Thêm urlconf
+
         path('search/', include('haystack.urls')),
 
 B10: Thêm file base.html, path: myapp/templates/search/base.html
