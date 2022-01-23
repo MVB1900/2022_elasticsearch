@@ -1,0 +1,11 @@
+{% extends 'search/base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+{% block content %}
+    {{ note_body.body }}
+    <br>
+    <hr>
+    <a href="{% url 'haystack_search' %}">back</a>
+{% endblock %}
