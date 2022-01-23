@@ -7,8 +7,8 @@ Step by steps:
 B1: Tạo project django 
 B2: Thêm app 'myapp'
     Thêm models
+    
         from django.db import models
-        
         from django.contrib.auth.models import User
 
 
@@ -19,7 +19,7 @@ B2: Thêm app 'myapp'
             body = models.TextField()
 
             def __unicode__(self):
-                return self.title```
+                return self.title
 
 B3: install django-haystack version elasticsearch
     ```pip install "django-haystack[elasticsearch]"```
