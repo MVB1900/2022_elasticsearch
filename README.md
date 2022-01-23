@@ -22,11 +22,11 @@ B2: Thêm app 'myapp'
                 return self.title
 
 B3: install django-haystack version elasticsearch
-    ```pip install "django-haystack[elasticsearch]"```
+    pip install "django-haystack[elasticsearch]"
 
 B4: Thêm haystack vào install_app
-  ```
-  INSTALLED_APPS = [
+
+INSTALLED_APPS = [
         'django.contrib.admin',
         'django.contrib.auth',
         'django.contrib.contenttypes',
@@ -39,18 +39,17 @@ B4: Thêm haystack vào install_app
         # Then your usual apps...
         'myapp',
     ]
-    ```
 B5: makemigrations và migrate
 
 B6: Thêm haystack_connection ( Ở đây sử dụng elasticsearch 7)
 
-        ```HAYSTACK_CONNECTIONS = {
+        HAYSTACK_CONNECTIONS = {
             'default': {
                 'ENGINE': 'haystack.backends.elasticsearch7_backend.Elasticsearch7SearchEngine',
                 'URL': 'http://127.0.0.1:9200/',
                 'INDEX_NAME': 'haystack',
             },
-        }```
+        }
         
 B7: Thêm file search_indexes.py, path: myapp/search_indexes.py
         ```import datetime
