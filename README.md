@@ -146,13 +146,3 @@ B12: Thêm view
             }
             return render(request, 'search/search.html', context)
 
-        # Create your views here.
-        def read_body(request, id):
-            note_body = Note.objects.get(id=id)
-            context = {
-                'title': note_body.title,
-                'note_body': note_body
-            }
-            return render(request, 'search/read_body.html', context)
-
-
