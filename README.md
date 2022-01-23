@@ -2,6 +2,8 @@
 Django-haystack-elasticsearch
 
 Cài đặt haystack-django-elasticsearch theo hướng dẫn tại: https://django-haystack.readthedocs.io/en/master/tutorial.html
+Cài đặt elasticsearch tại: https://www.elastic.co/downloads/elasticsearch
+Running elasticsearch trong cmd: bin\elasticsearch.bat
 
 Step by steps:
 B1: Tạo project django 
